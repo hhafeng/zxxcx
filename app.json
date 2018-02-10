@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/case/case",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/designer/designer",
+    "pages/topic/topic",
+    "pages/calc/calc"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "装修小程序",
+    "backgroundColor": "#eee",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color":"#777777",
+    "selectedColor":"#ff9900",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"asset/images/toolbar/home.png",
+        "selectedIconPath": "asset/images/toolbar/home2.png"
+      },
+      {
+        "pagePath": "pages/case/case",
+        "text": "案例",
+        "iconPath": "asset/images/toolbar/case.png",
+        "selectedIconPath": "asset/images/toolbar/case2.png"
+      },
+      {
+        "pagePath": "pages/case/case",
+        "text": "关于",
+        "iconPath": "asset/images/toolbar/about.png",
+        "selectedIconPath": "asset/images/toolbar/about2.png"
+      }
+    ]
+  }
+}

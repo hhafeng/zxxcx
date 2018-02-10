@@ -1,0 +1,37 @@
+<!--pages/case/case.wxml-->
+<view class='casepage'>
+  <view class='caselist'>
+      <view class='caseflex'>
+        <view class='casebox'>
+          <view class='photobox'>
+            <image src='http://ss0.hszunxiang.com/20170821/194df4d1fd878c49.jpg' mode='widthFix'></image>
+          </view>
+          <text class='casetitle'>1111</text>
+        </view>
+      </view>
+      <view class='caseflex'>
+        <view class='casebox'>
+          <view class='photobox'>
+            <image src='http://image.zhangxinxu.com/image/blog/201203/2012-03-23_233833.jpg' mode='widthFix'></image>
+          </view>
+          <text class='casetitle'>1111</text>
+        </view>
+      </view>
+      <view class='caseflex'>
+        <view class='casebox'>
+          <view class='photobox'>
+            <image src='https://upload-images.jianshu.io/upload_images/1031000-d0693c06bb3a00e3.png?imageMogr2/auto-orient/' mode='widthFix'></image>
+          </view>
+          <text class='casetitle'>1111</text>
+        </view>
+      </view>
+      <view class='caseflex'>
+        <view class='casebox'>
+          <view class='photobox'>
+            <image src='http://ss0.hszunxiang.com/20170821/194df4d1fd878c49.jpg' mode='widthFix'></image>
+          </view>
+          <text class='casetitle'>1111</text>
+        </view>
+      </view>
+  </view>
+</view>
