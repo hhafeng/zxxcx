@@ -1,5 +1,14 @@
 <!--pages/case/case.wxml-->
 <view class='casepage'>
+  <scroll-view scroll-x class='caseScroll'>
+    <view class='caseClass '>家装案例</view>
+    <view class='caseClass current'>工装案例</view>
+    <view class='caseClass'>实景图</view>
+    <view class='caseClass'>北欧风格</view>
+    <view class='caseClass'>实景图</view>
+    <view class='caseClass'>现代简约风格</view>
+    <view class='caseClass'>美式温暖风</view>
+  </scroll-view>
   <view class='caselist'>
       <view class='caseflex'>
         <view class='casebox'>
