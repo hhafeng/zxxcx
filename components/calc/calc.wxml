@@ -1,0 +1,33 @@
+<!--components/calc/calc.wxml-->
+<view class='wrapper'>
+  <view class='calc-title'>
+    <view class='calc-title-line'></view>
+    <text>10秒估算装修报价</text>
+    <view class='calc-title-line'></view>
+  </view>
+  <view class='calc-box'>
+    <view class='shiwan' wx:if='{{showShiwan}}'><image src='{{ shiwan }}'></image></view>
+    <view class='wan'><image src='{{ wan }}'></image></view>
+    <view class='qian'><image src='{{ qian }}'></image></view>
+    <view class='bai'><image src='{{ bai }}'></image></view>
+    <view class='shi'><image src='{{ shi }}'></image></view>
+    <view class='ge'><image src='{{ ge }}'></image></view>
+    <text>元</text>
+  </view>
+  <view class='lz-form'>
+    <view class='lz-form-item'>
+      <input placeholder-class='lz-form-placeholder' type='text' type='number' placeholder='面积' /><text class='lz-form-item-right'>㎡</text>
+    </view>
+    <view class='lz-form-item'>
+      <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
+        <view class='lz-form-picker-text'>{{multiArray[0][multiIndex[0]]}} {{multiArray[1][multiIndex[1]]}} {{multiArray[2][multiIndex[2]]}} {{multiArray[3][multiIndex[3]]}}</view>
+      </picker>
+    </view>
+    <view class='lz-form-item'>
+      <input placeholder-class='lz-form-placeholder' type='text' type='number' placeholder='输入手机，短信获取报价结果' /><text class='lz-form-item-right'>㎡</text>
+    </view>
+    <view class='lz-form-item-button'>
+      <button class='lz-btn lz-btn-default lz-btn-block'>立即申请</button>
+    </view>
+  </view>
+</view>

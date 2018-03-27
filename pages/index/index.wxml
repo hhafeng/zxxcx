@@ -1,13 +1,78 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class='container'>
+  <swiper indicator-dots='true' autoplay='true' style='width:100%;'>
+    <swiper-item>
+      <image src='https://zhuangxiuapp.oss-cn-hangzhou.aliyuncs.com/3f3c46e4370c2e7627223916bb50324843986.png' />
+    </swiper-item>
+    <swiper-item>
+      <image src='https://zhuangxiuapp.oss-cn-hangzhou.aliyuncs.com/3f3c46e4370c2e7627223916bb50324843986.png' />
+    </swiper-item>
+    <swiper-item>
+      <image src='https://zhuangxiuapp.oss-cn-hangzhou.aliyuncs.com/3f3c46e4370c2e7627223916bb50324843986.png' />
+    </swiper-item>
+  </swiper>
+  
+  <view class='nav'>
+    <view class='nav-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_965627BA3651FB83A1B019D49BD71E90.png' />
+      <text>免费设计</text>
+    </view>
+    <view class='nav-item'>
+      <view class='hot-icon'></view>
+      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_BDB2D47CDEB3B8C02449D90F8AB5B197.png' />
+      <text>装修咨询</text>
+    </view>
+    <view class='nav-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_B9E785A2ABA269F2DDB0CD35B007A173.png' />
+      <text>设计大伽</text>
+    </view>
+    <view class='nav-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_2AF37A27AFC5F17E07B6BBC0B5B82B87.png' />
+      <text>装修知识</text>
+    </view>
+    <view class='nav-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_AC14C6F8FA63858B9CDF0093938D8F0E.png' />
+      <text>关于我们</text>
+    </view>
+    <view class='nav-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_AC14C6F8FA63858B9CDF0093938D8F0E.png' />
+      <text>关于我们</text>
+    </view>
+    <view class='nav-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_B9E785A2ABA269F2DDB0CD35B007A173.png' />
+      <text>设计大伽</text>
+    </view>
+    <view class='nav-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_2AF37A27AFC5F17E07B6BBC0B5B82B87.png' />
+      <text>装修知识</text>
+    </view>
+    <view class='nav-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_BDB2D47CDEB3B8C02449D90F8AB5B197.png' />
+      <text>装修咨询</text>
+    </view>
+    <view class='nav-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_B9E785A2ABA269F2DDB0CD35B007A173.png' />
+      <text>设计大伽</text>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class='index-ad'>
+    <view class='index-ad-1'><image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' /></view>
+    <view class='index-right-ad'>
+      <view class='index-ad-2'><image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_D72EBBE90C89A20710D49B78113DB169.jpg' /></view>
+      <view class='index-ad-3'><image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_54088318F419F37DED1C5B7782550A88.jpg' /></view>
+    </view>
   </view>
+  <view class='item-divider'></view>
+
+  <view><calc></calc></view>
+
+  <view class='item-divider'></view>
+
+  <view class='index-case'>
+    <view class='simple-title'>
+      <text class='simple-title-text'>精品案例</text>
+      <text class='simple-title-more'>更多>></text>
+    </view>
+  </view>
+
 </view>
