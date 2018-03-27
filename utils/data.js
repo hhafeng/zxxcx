@@ -3,5 +3,4 @@ module.exports={
   user_appid:'',
   getCaseList:HTTP_HOST+'/v1/case',
   getDesignerList:HTTP_HOST+'v1/designer',
-  
 }
