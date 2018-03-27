@@ -52,3 +52,25 @@ swiper-item image{
 .index-ad-3 image{
   width:100%;height: 150rpx;
 }
+.index-case-list{
+  
+}
+.index-case-item{
+ padding:0 30rpx;
+}
+.index-case-item image{
+  width:100%;height: 400rpx;
+}
+.index-case-text{
+  display: flex;
+  height:60rpx;
+  align-items: center;
+  margin-bottom:30rpx;
+  color:#999;
+}
+.index-case-text text{
+  flex:1;
+  overflow-x:hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

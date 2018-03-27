@@ -73,6 +73,29 @@
       <text class='simple-title-text'>精品案例</text>
       <text class='simple-title-more'>更多>></text>
     </view>
+    <view class='index-case-list'>
+      <view class='index-case-item'>
+        <image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' />
+        <view class='index-case-text'>
+          <text>欧式三房二厅装修效果图欧式三房二厅装修效果图欧式三房二厅装修效果图</text>
+          <view class='eye-icon'></view>200
+        </view>
+      </view>
+      <view class='index-case-item'>
+        <image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' />
+        <view class='index-case-text'>
+          <text>欧式三房二厅装修效果图</text>
+          <view class='eye-icon'></view>200
+        </view>
+      </view>
+      <view class='index-case-item'>
+        <image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' />
+        <view class='index-case-text'>
+          <text>欧式三房二厅装修效果图</text>
+          <view class='eye-icon'></view>200
+        </view>
+      </view>
+    </view>
   </view>
 
 </view>
