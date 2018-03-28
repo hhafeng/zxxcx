@@ -37,7 +37,7 @@
 <view class='list-masonry'>
   <view class='item-masonry' wx:for="{{note}}" wx:key="index">
     <image src='{{item.url}}' mode='widthFix'></image>
-    <text>{{item.title}}{{item.title}}{{item.title}}</text>
+    <text>{{item.title}}{{index}}</text>
     <view class='case-info'>
       <view class='view-count'>
         <view class='eye-icon'></view>

@@ -102,12 +102,12 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    console.log('aaaa')
-    let data = {
-      title: '案例名称',
-      url: 'http://zq.jhcms.cn/attachs/photo/201711/20171130_176CFE51B6710715B1BBBEF2F86ACB0C.jpg',
-    };
-    this.data.note.push(data);
+    this.data.note.push(this.data.note[0]);
+    this.data.note.push(this.data.note[1]);
+    this.data.note.push(this.data.note[2]);
+    this.data.note.push(this.data.note[3]);
+    this.data.note.push(this.data.note[4]);
+
     this.setData({ note: this.data.note })
   },
 
