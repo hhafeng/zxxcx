@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class='container'>
+<view class='index-page'>
   <swiper indicator-dots='true' autoplay='true' style='width:100%;'>
     <swiper-item>
       <image src='https://zhuangxiuapp.oss-cn-hangzhou.aliyuncs.com/3f3c46e4370c2e7627223916bb50324843986.png' />
