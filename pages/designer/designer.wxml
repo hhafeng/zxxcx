@@ -1,2 +1,81 @@
 <!--pages/designer/designer.wxml-->
-<text>pages/designer/designer.wxml</text>
+<view class='designer-page'>
+  <view class='designer-list'>
+
+<navigator url='/pages/designerShow/designerShow'>
+    <view class='designer-item'>
+      <view class='designer-photo'>
+        <image src='http://zq.jhcms.cn/attachs/photo/201712/20171201_81C5D961AE29EF3DE5DF75CA5459168C.jpg' mode='widthFix'></image>
+      </view>
+      <view class='item-content'>
+        <view class='item-p'>
+          <text class='designer-name'>刘志伟</text><text>首席设计师</text>
+        </view>
+        <view class='item-p'>
+          设计风格：<text>雅志风格</text>
+        </view>
+        <view class='item-p'>
+          设计理念：<text>艺术是生活的升华，设计是艺术的呈现。</text>
+        </view>
+      </view>
+      <view class='item-right-icon'></view>
+    </view>
+</navigator>
+    <view class='designer-item'>
+      <view class='designer-photo'>
+        <image src='http://zq.jhcms.cn/attachs/photo/201712/20171201_833B0F2B9501AEEC40F374B7BD319858.jpg' mode='widthFix'></image>
+      </view>
+      <view class='item-content'>
+        <view class='item-p'>
+          <text class='designer-name'>刘志伟</text><text>首席设计师</text>
+        </view>
+        <view class='item-p'>
+          设计风格：<text>雅志风格</text>
+        </view>
+        <view class='item-p'>
+          设计理念：<text>艺术是生活的升华，设计是艺术的呈现。</text>
+        </view>
+      </view>
+      <view class='item-right-icon'></view>
+    </view>
+
+    <view class='designer-item'>
+      <view class='designer-photo'>
+        <image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_486203EEE8C6655B38FFE00CE373C84D.jpg' mode='widthFix'></image>
+      </view>
+      <view class='item-content'>
+        <view class='item-p'>
+          <text class='designer-name'>王丁贤</text><text>首席设计师</text>
+        </view>
+        <view class='item-p'>
+          设计风格：<text>雅志风格 雅志风格 雅志风格 雅志风格 雅志风格</text>
+        </view>
+        <view class='item-p'>
+          设计理念：<text>艺术是生活的升华，设计是艺术的呈现。</text>
+        </view>
+      </view>
+      <view class='item-right-icon'></view>
+    </view>
+
+    <view class='designer-item'>
+      <view class='designer-photo'>
+        <image src='http://zq.jhcms.cn/attachs/photo/201501/20150115_9424FD006302D27F12362C4C64DC6AF0.jpg' mode='widthFix'></image>
+      </view>
+      <view class='item-content'>
+        <view class='item-p'>
+          <text class='designer-name'>符永盛</text><text>首席设计师</text>
+        </view>
+        <view class='item-p'>
+          设计风格：<text>雅志风格</text>
+        </view>
+        <view class='item-p'>
+          设计理念：<text>艺术是生活的升华，设计是艺术的呈现。</text>
+        </view>
+      </view>
+      <view class='item-right-icon'></view>
+    </view>
+
+
+
+  </view>
+</view>

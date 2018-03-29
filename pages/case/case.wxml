@@ -35,20 +35,42 @@
     </view>
 
 <view class='list-masonry'>
-  <view class='item-masonry' wx:for="{{note}}" wx:key="index">
-    <image src='{{item.url}}' mode='widthFix'></image>
-    <text>{{item.title}}{{index}}</text>
-    <view class='case-info'>
-      <view class='view-count'>
-        <view class='eye-icon'></view>
-        <text class='view-count-text'>20056</text>
-      </view>
-      <view class='star-count'>
-        <view class='star-icon'></view>
-        <text class='star-count-text'>125</text>
+
+  <view class='list-masonry-column'>
+    <view class='item-masonry' wx:for="{{note}}" wx:key="index" wx:if='{{index%2==0}}'>
+      <image src='{{item.url}}' mode='widthFix'></image>
+      <text>{{item.title}}{{index}}</text>
+      <view class='case-info'>
+        <view class='view-count'>
+          <view class='eye-icon'></view>
+          <text class='view-count-text'>20056</text>
+        </view>
+        <view class='star-count'>
+          <view class='star-icon'></view>
+          <text class='star-count-text'>125</text>
+        </view>
       </view>
     </view>
   </view>
+  
+  <view class='list-masonry-column'>
+    <view class='item-masonry' wx:for="{{note}}" wx:key="index" wx:if='{{index%2==1}}'>
+      <image src='{{item.url}}' mode='widthFix'></image>
+      <text>{{item.title}}{{index}}</text>
+      <view class='case-info'>
+        <view class='view-count'>
+          <view class='eye-icon'></view>
+          <text class='view-count-text'>20056</text>
+        </view>
+        <view class='star-count'>
+          <view class='star-icon'></view>
+          <text class='star-count-text'>125</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+
 </view>
 
   

@@ -22,10 +22,10 @@
       <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_BDB2D47CDEB3B8C02449D90F8AB5B197.png' />
       <text>装修咨询</text>
     </view>
-    <view class='nav-item'>
+    <navigator url='/pages/designer/designer' hover-class='none' class='nav-item'>
       <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_B9E785A2ABA269F2DDB0CD35B007A173.png' />
       <text>设计大伽</text>
-    </view>
+    </navigator>
     <view class='nav-item'>
       <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_2AF37A27AFC5F17E07B6BBC0B5B82B87.png' />
       <text>装修知识</text>

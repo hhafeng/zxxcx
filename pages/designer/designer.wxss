@@ -1,1 +1,38 @@
 /* pages/designer/designer.wxss */
+page{
+  background-color: #fff;
+}
+.designer-page{
+  background-color: #f1f1f1;
+  padding-top:2rpx;
+}
+.designer-item{
+  display: flex;
+  position: relative;
+  background-color: #fff;
+  padding:30rpx;
+  margin-top: 2rpx;
+  align-items: center;
+
+}
+.designer-item .designer-photo{
+   width:180rpx;height: 180rpx;border-radius: 50%;overflow: hidden;
+}
+.designer-item image{
+  width: 100%;
+}
+.designer-item .item-content{
+  flex:2;
+  display: flex;
+  flex-direction: column;
+  padding:0 30rpx;
+}
+.designer-item text{
+  font-size:24rpx;color:#666;
+}
+.designer-item .item-p{
+  margin-bottom: 12rpx;
+}
+.designer-item .item-p .designer-name{
+  font-size:44rpx;color:#222;margin-right: 16rpx;
+}

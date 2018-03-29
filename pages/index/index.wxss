@@ -53,7 +53,7 @@ swiper-item image{
   width:100%;height: 150rpx;
 }
 .index-case-list{
-  
+  padding-bottom: 20rpx;
 }
 .index-case-item{
  padding:0 30rpx;

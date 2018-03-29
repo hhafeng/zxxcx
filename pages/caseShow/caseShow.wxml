@@ -1,0 +1,8 @@
+<!--pages/caseShow/caseShow.wxml-->
+<view class='caseShow-page'>
+  <swiper class='swiper' style="height:{{windowHeight}}px;">
+    <swiper-item wx:for='{{note}}' wx:key='index' class='swiper-item'>
+      <image src='{{item.url}}' mode='aspectFit'></image>
+    </swiper-item>
+  </swiper>
+</view>
