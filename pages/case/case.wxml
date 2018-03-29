@@ -37,6 +37,7 @@
 <view class='list-masonry'>
 
   <view class='list-masonry-column'>
+  <navigator url='/pages/caseShow/caseShow'>
     <view class='item-masonry' wx:for="{{note}}" wx:key="index" wx:if='{{index%2==0}}'>
       <image src='{{item.url}}' mode='widthFix'></image>
       <text>{{item.title}}{{index}}</text>
@@ -51,6 +52,7 @@
         </view>
       </view>
     </view>
+  </navigator>
   </view>
   
   <view class='list-masonry-column'>

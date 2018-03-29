@@ -5,4 +5,16 @@
       <image src='{{item.url}}' mode='aspectFit'></image>
     </swiper-item>
   </swiper>
+  <view class='case-show-bottom'>
+    <view class='case-title'>北欧清新家装效果图集</view>
+    <view class='case-f-v'>
+        <view class='case-view-count'>6745 查看</view>
+        <view class='case-fav-count'>
+          <view class='star-white-icon m-p-r'></view>879
+        </view>
+    </view>
+    <view class='case-btn-style'>
+      <view class='lz-btn lz-btn-block lz-btn-green'>装成这样需要多少钱</view>
+    </view>
+  </view>
 </view>

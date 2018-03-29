@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/caseShow/caseShow",
     "pages/index/index",
+    "pages/caseShow/caseShow",
     "pages/designer/designer",
     "pages/designerShow/designerShow",
     "pages/case/case",

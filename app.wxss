@@ -40,3 +40,31 @@ view,text {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.lz-btn{
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 18px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: 0;
+    box-sizing: border-box;
+}
+.lz-btn-block{
+  width: 100%;
+}
+.lz-btn-default{
+  background-color: #fc6a48;
+  color:#fff;
+}
+.lz-btn-green{
+  background-color: #009966;
+  color:#fff;
+}
+.m-p-r{
+  padding-right: 16rpx;
+}
