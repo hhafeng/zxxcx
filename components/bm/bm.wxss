@@ -1,0 +1,88 @@
+/* components/calc/calc.wxss */
+.calc-title{
+  display: flex;
+  padding:30rpx;
+  align-items: center;
+  justify-content: center;
+}
+.calc-title-line{
+  width:80rpx;
+  height: 2rpx;
+  background-color: #ccc;
+}
+.calc-title text{
+  font-size:36rpx;
+  margin: 0 30rpx;
+}
+.calc-box{
+  margin:0 30rpx 30rpx 30rpx;
+  height:100rpx;
+  border:solid 3px #222;
+  background-color: #d1d1d1;
+  border-radius: 8rpx;
+  box-shadow: 8rpx 8rpx 8rpx #666;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  box-sizing: border-box;
+  padding:0 16rpx 4rpx 0;
+}
+.calc-box image{
+  width:18px;height: 30px;margin-right: 6rpx;
+}
+.calc-box text{
+  margin-left:20rpx;
+}
+.lz-form{
+  padding:0 30rpx 30rpx 30rpx;
+}
+.lz-form input{
+  border: none;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding:0 30rpx;
+  box-sizing: border-box;
+}
+.lz-form-placeholder{color:#222;}
+.lz-form-item{
+  border: 1px solid #d8d8d8;
+  position: relative;
+  height: 80rpx;
+  border-radius: 6rpx;
+  width:100%;
+  margin:16rpx 0;
+}
+.lz-form-item-button{
+  position: relative;
+  height: 80rpx;
+  margin:16rpx 0;
+}
+.lz-form-item .lz-form-item-right{
+  position: absolute;
+  right:16rpx;bottom:12rpx;
+}
+.lz-form-picker-text{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding:0 30rpx;
+}
+.lz-btn{
+    display: inline-block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 18px;
+    white-space: nowrap;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    outline: 0;
+}
+.lz-btn-block{
+  width: 100%;
+}
+.lz-btn-default{
+  background-color: #fc6a48;
+  color:#fff;
+}

@@ -1,0 +1,68 @@
+<!--pages/aboutus/aboutus.wxml-->
+<view class='aboutus-page'>
+  <view class='view-top'>
+    <image class='logo' src='https://pics.jiaju.168hs.com/2015/0819/14399448179831927021.jpg' style='width:160rpx;height:160rpx;'></image>
+    <text>黄山中博装饰工程有限公司</text>
+    <view class='tel' bindtap='callPhone'>
+      <image class='icon-tel' src='/asset/images/icon/icon-tel.png' style='width:60rpx;height:60rpx;'></image>
+      <text>400 586 5858</text>
+      <image class='icon-tel' src='/asset/images/icon/arrow-right.png' style='width:40rpx;height:40rpx;'></image>
+    </view>
+  </view>
+
+
+<navigator url='/pages/map/map'>
+  <view class='lz-item'>
+    <image class='icon-tel' src='/asset/images/icon/location-icon.png' style='width:60rpx;height:60rpx;'></image>
+      <text class='item-content'>总部：黄山市屯溪区天都大道10号</text>
+      <image class='icon-tel item-right' src='/asset/images/icon/arrow-right-gray.png' style='width:36rpx;height:36rpx;'></image>
+  </view>
+</navigator>
+
+  <view class='lz-item'>
+    <image class='icon-tel' src='/asset/images/icon/meidian-icon.png' style='width:60rpx;height:60rpx;'></image>
+      <text class='item-content'>中博装饰歙县公司地址：歙县黄山东路百花路口和泰国际城</text>
+      <image class='icon-tel item-right' src='/asset/images/icon/arrow-right-gray.png' style='width:36rpx;height:36rpx;'></image>
+  </view>
+
+  <view class='lz-item'>
+    <image class='icon-tel' src='/asset/images/icon/meidian-icon.png' style='width:60rpx;height:60rpx;'></image>
+      <text class='item-content'>中博装饰太平公司地址：太平平湖西路8号</text>
+      <image class='icon-tel item-right' src='/asset/images/icon/arrow-right-gray.png' style='width:36rpx;height:36rpx;'></image>
+  </view>
+
+  <view class='lz-item-title'>
+    公司相册<image class='icon-tel item-right' src='/asset/images/icon/more-icon.png' style='width:60rpx;height:60rpx;'></image>
+  </view>
+  <view class='photo-list'>
+    <view class='photo-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_6C836FAB7732B2095BF98C62B4D293CD.jpg'></image>
+    </view>
+    <view class='photo-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_58C842D3325D84CE4AA3FF3BFF22064A.jpg'></image>
+    </view>
+    <view class='photo-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_BCDF16C81E490AE09DE6E002A1AFF467.jpg'></image>
+    </view>
+    <view class='photo-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_D8CF6A5599ADBB6597CD1983899C895C.jpg'></image>
+    </view>
+    <view class='photo-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_6C836FAB7732B2095BF98C62B4D293CD.jpg'></image>
+    </view>
+    <view class='photo-item'>
+      <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_ABEC1554B38CD26FBF31F140B27CFD9E.jpg'></image>
+    </view>
+  </view>
+
+  <view class='lz-item-title'>
+    公司简介<image class='icon-tel item-right' src='/asset/images/icon/more-icon.png' style='width:60rpx;height:60rpx;'></image>
+  </view>
+
+  <view class='about-content'>
+    安徽悦城建筑装饰公司是一家集室内外设计，预算，施工，软装配饰于一体化的专业装饰公司，具有装饰设计与施工一体化叁级资质，是一家在公共装饰领域发展多年的成熟企业，以高品质，高标准致力于装修市场。2010年公司向安徽家装领域拓展，分别在合肥，芜湖，马鞍山成立分公司，经过多年的整合和磨练，公司吸纳了一批来自
+  </view>
+
+
+
+</view>

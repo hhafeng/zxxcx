@@ -1,0 +1,4 @@
+<!--pages/map/map.wxml-->
+<view class='map-page'>
+  <map id="map" longitude="118.343585" latitude="29.726397" scale="14" markers="{{markers}}" show-location style="width: 100%; height: {{windowHeight}}px;"></map>
+</view>
