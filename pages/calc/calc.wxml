@@ -1,2 +1,12 @@
 <!--pages/calc/calc.wxml-->
-<text>pages/calc/calc.wxml</text>
+<view class='calc-page'>
+
+  <view class='calc-top'>
+    <image src='https://home.168hs.com//wap/images/zxbj_n_banner.jpg' mode='widthFix' style='width:100%;'></image>
+  </view>
+  <calc></calc>
+  <view class='calc-bottom'>
+    <image src='//img.to8to.com/wap/v2/zxbj/m_from_img3.jpg' mode='widthFix' style='width:100%;'></image>
+  </view>
+
+</view>

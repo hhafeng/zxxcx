@@ -1,4 +1,7 @@
 /* pages/designerShow.wxss */
+.designerShow-page{
+  position: relative;
+}
 .designer-p-n{
   display: flex;
   align-items: center;
@@ -33,7 +36,7 @@
   color:#666;
 }
 .index-case-list{
-  padding-bottom: 20rpx;
+  padding-bottom: 80rpx;
 }
 .index-case-item{
  padding:0 30rpx;
@@ -53,4 +56,30 @@
   overflow-x:hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.bjrukou{
+  display: flex;
+  position: fixed;
+  left:0;bottom: 0;
+  height: 88rpx;
+  width:100%;
+  background-color: #fff;
+}
+.bjrukou .rk-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex:1;
+  background-color: #34c083;
+}
+.bjrukou .rk-btn text{
+  color:#fff;font-size:32rpx;
+}
+.bjrukou .sj{
+  margin-right: 2rpx;
+}
+.bjrukou .rk-btn .rk-icon{
+    height: 48rpx;
+    width:  48rpx;
+    margin-right: 16rpx;
 }

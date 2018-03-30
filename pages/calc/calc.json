@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "calc": "../../components/calc/calc"
+  }
+}

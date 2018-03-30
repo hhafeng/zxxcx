@@ -1,14 +1,19 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/map/map",
+    "pages/aboutus/aboutus",
+    "pages/baoming/baoming",
+    "pages/calc/calc",
     "pages/caseShow/caseShow",
     "pages/designer/designer",
     "pages/designerShow/designerShow",
     "pages/case/case",
     "pages/logs/logs",
     "pages/topic/topic",
-    "pages/calc/calc",
-    "components/calc/calc"
+    "components/calc/calc",
+    "components/bm/bm"
+    
   ],
   "window": {
     "backgroundColor": "#222",
@@ -35,7 +40,7 @@
       },
       {
         "pagePath": "pages/case/case",
-        "text": "关于",
+        "text": "我的",
         "iconPath": "asset/images/toolbar/about.png",
         "selectedIconPath": "asset/images/toolbar/about2.png"
       }

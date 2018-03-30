@@ -62,9 +62,33 @@ view,text {
   color:#fff;
 }
 .lz-btn-green{
-  background-color: #009966;
+  background-color: #34c083;
   color:#fff;
 }
 .m-p-r{
   padding-right: 16rpx;
+}
+.lz-item{
+  display: flex;
+  border-bottom: solid 2rpx #f1f1f1;
+  align-items: center;
+  padding:24rpx 20rpx;
+  position: relative;
+}
+.lz-item .item-right{
+  position: absolute;
+  right:20rpx;
+  top:calc(50%-20rpx);
+}
+.lz-item .item-content{
+  padding-right:48rpx;
+  padding-left:16rpx;
+  flex:1;
+}
+.lz-item-title{
+  padding:16rpx 30rpx;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

@@ -13,8 +13,10 @@
           <view class='star-white-icon m-p-r'></view>879
         </view>
     </view>
+    <navigator url='/pages/calc/calc'>
     <view class='case-btn-style'>
       <view class='lz-btn lz-btn-block lz-btn-green'>装成这样需要多少钱</view>
     </view>
+    </navigator>
   </view>
 </view>

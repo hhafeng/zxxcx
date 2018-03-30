@@ -13,12 +13,12 @@
   </swiper>
   
   <view class='nav'>
-    <view class='nav-item'>
+    <navigator url='/pages/baoming/baoming' hover-class='none' class='nav-item'>
+      <view class='hot-icon'></view>
       <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_965627BA3651FB83A1B019D49BD71E90.png' />
       <text>免费设计</text>
-    </view>
+    </navigator>
     <view class='nav-item'>
-      <view class='hot-icon'></view>
       <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_BDB2D47CDEB3B8C02449D90F8AB5B197.png' />
       <text>装修咨询</text>
     </view>
@@ -30,30 +30,10 @@
       <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_2AF37A27AFC5F17E07B6BBC0B5B82B87.png' />
       <text>装修知识</text>
     </view>
-    <view class='nav-item'>
+    <navigator url='/pages/aboutus/aboutus' hover-class='none' class='nav-item'>
       <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_AC14C6F8FA63858B9CDF0093938D8F0E.png' />
       <text>关于我们</text>
-    </view>
-    <view class='nav-item'>
-      <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_AC14C6F8FA63858B9CDF0093938D8F0E.png' />
-      <text>关于我们</text>
-    </view>
-    <view class='nav-item'>
-      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_B9E785A2ABA269F2DDB0CD35B007A173.png' />
-      <text>设计大伽</text>
-    </view>
-    <view class='nav-item'>
-      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_2AF37A27AFC5F17E07B6BBC0B5B82B87.png' />
-      <text>装修知识</text>
-    </view>
-    <view class='nav-item'>
-      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_BDB2D47CDEB3B8C02449D90F8AB5B197.png' />
-      <text>装修咨询</text>
-    </view>
-    <view class='nav-item'>
-      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_B9E785A2ABA269F2DDB0CD35B007A173.png' />
-      <text>设计大伽</text>
-    </view>
+    </navigator>
   </view>
   <view class='index-ad'>
     <view class='index-ad-1'><image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' /></view>

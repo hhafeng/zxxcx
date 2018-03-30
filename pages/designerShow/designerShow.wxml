@@ -50,4 +50,16 @@
       </view>
     </view>
 
+
+  <view class='bjrukou'>
+    <navigator url='/pages/baoming/baoming' class='rk-btn sj'>
+      <image class='rk-icon' src='/asset/images/icon/sj-icon.png'></image>
+      <text>免费申请设计</text>
+    </navigator>
+    <navigator url='/pages/calc/calc' class='rk-btn bj'>
+      <image class='rk-icon' src='/asset/images/icon/bj-icon.png'></image>
+      <text>免费获取报价</text>
+    </navigator>
+  </view>
+
 </view>
