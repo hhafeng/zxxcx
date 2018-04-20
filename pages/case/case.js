@@ -1,59 +1,13 @@
 // pages/case/case.js
+var request=require('../../utils/request');
+var api=require('../../utils/api');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    note: [
-      {
-        id:1,
-        title: '案例名称',
-        url: 'http://zq.jhcms.cn/attachs/photo/201711/20171130_176CFE51B6710715B1BBBEF2F86ACB0C.jpg',
-      }, 
-      {
-        id: 2,
-        title: '你所不知道的红酒知识',
-        url: 'http://img3.imgtn.bdimg.com/it/u=1417732605,3777474040&fm=26&gp=0.jpg',
-      }, 
-      {
-        id: 3,
-        title: '红酒知识',
-        url: 'http://f10.baidu.com/it/u=121654667,1482133440&fm=72',
-      },
-      {
-        id: 5,
-        title: '案例名称',
-        url: 'http://zq.jhcms.cn/attachs/photo/201711/20171130_9E39DA252E3946BE36218D85876C4AB4.jpg',
-      },
-      {
-        id: 6,
-        title: '案例名称',
-        url: 'http://img3.imgtn.bdimg.com/it/u=1417732605,3777474040&fm=26&gp=0.jpg'
-      },
-       
-      {
-        id: 7,
-        title: '案例名称',
-        url: 'http://f10.baidu.com/it/u=121654667,1482133440&fm=72'
-      },
-      {
-        id: 8,
-        title: '案例名称',
-        url: 'http://img4.imgtn.bdimg.com/it/u=2748975304,2710656664&fm=26&gp=0.jpg'
-      }, 
-      {
-        id: 9,
-        title: '案例名称',
-        url: 'http://img2.imgtn.bdimg.com/it/u=1561660534,130168102&fm=26&gp=0.jpg'
-      },
-      {
-        id: 11,
-        title: '案例名称',
-        url: 'http://img3.imgtn.bdimg.com/it/u=1417732605,3777474040&fm=26&gp=0.jpg'
-      }
-      
-    ],
+    cases: [],
     handleStyle:false,
     handleHuxing: false,
     handleClass: false,
@@ -68,35 +22,24 @@ Page({
       huxingId:0,
       classId:0
     },
-    styleList:[
-      { id: 1, value: '简约' }, 
-      { id: 2, value: '美式风格' }, 
-      { id: 3, value: '现代' }, 
-      { id: 4, value: '日式' },
-      { id: 5, value: '东南来' },
-      { id: 6, value: '宜家' },
-      { id: 7, value: '混搭' },
-    ],
-    huxingList:[
-      { id: 34, value: '小户型' },
-      { id: 35, value: '三居室' }, 
-      { id: 36, value: '四居' }, 
-      { id: 37, value: '别墅' }, 
-      { id: 38, value: '公寓楼' },  
-    ],
-    classList:[
-      { id: 24, value: '餐厅' }, 
-      { id: 14, value: '客厅' }, 
-      { id: 44, value: '背景墙' }, 
-      { id: 54, value: '商业案例' }, 
-      { id: 64, value: '卫生间' }, 
-    ]
+    loadMore:true,
+    styleList:[],
+    huxingList:[],
+    classList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad (options) {
+    request.GET(api.case_category, {},  (res)=> {
+      this.setData({
+        styleList: res.data['styleList'],
+        huxingList: res.data['huxingList'],
+        classList: res.data['classList']
+      })
+    });
+    this.loadMore(this.data.postData);
     
   },
   /**
@@ -111,20 +54,28 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.data.note.push(this.data.note[0]);
-    this.data.note.push(this.data.note[1]);
-    this.data.note.push(this.data.note[2]);
-    this.data.note.push(this.data.note[3]);
-    this.data.note.push(this.data.note[4]);
-
-    this.setData({ note: this.data.note })
+    this.data.postData.page++;
+    this.loadMore(this.data.postData);
   },
-
   /**
-   * 用户点击右上角分享
+   * 上拉加载
    */
-  onShareAppMessage: function () {
-  
+  loadMore(postData){
+    if(this.data.loadMore){
+      request.GET(api.case, postData, (res) => {
+        if (res.data.length > 0) {
+          res.data.forEach((item, index) => {
+            this.data.cases.push(item);
+          })
+          this.setData({
+            cases: this.data.cases,
+          })
+        } else {
+          this.setData({ loadMore: false })
+        }
+
+      });
+    }
   },
   handleItem(e){
     switch (e.currentTarget.dataset.item) {
@@ -142,7 +93,7 @@ Page({
   handleStyle(e){
     this.setData({
       selectedCategory:{
-        styleText: this.data.styleList[e.currentTarget.dataset.index].value,
+        styleText: this.data.styleList[e.currentTarget.dataset.index].name,
         huxingText: this.data.selectedCategory.huxingText,
         classText: this.data.selectedCategory.classText,
       },
@@ -154,13 +105,16 @@ Page({
       },
       handleStyle: false, handleHuxing: false, handleClass: false,
     })
-    console.log(this.data.postData)
+    this.setData({ cases: [] });
+    this.data.postData.page = 1;
+    this.setData({ loadMore: true });
+    this.loadMore(this.data.postData);
   },
   handleHuxing(e){
     this.setData({
       selectedCategory: {
         styleText: this.data.selectedCategory.styleText,
-        huxingText: this.data.huxingList[e.currentTarget.dataset.index].value,
+        huxingText: this.data.huxingList[e.currentTarget.dataset.index].name,
         classText: this.data.selectedCategory.classText,
       },
       postData: {
@@ -171,14 +125,17 @@ Page({
       },
       handleStyle: false, handleHuxing: false, handleClass: false,
     })
-    console.log(this.data.postData)
+    this.setData({ cases: [] });
+    this.data.postData.page = 1;
+    this.setData({ loadMore: true });
+    this.loadMore(this.data.postData)
   },
   handleClass(e){
     this.setData({
       selectedCategory: {
         styleText: this.data.selectedCategory.styleText,
         huxingText: this.data.selectedCategory.huxingText,
-        classText: this.data.classList[e.currentTarget.dataset.index].value,
+        classText: this.data.classList[e.currentTarget.dataset.index].name,
       },
       postData: {
         page: this.data.postData.page,
@@ -188,6 +145,9 @@ Page({
       },
       handleStyle: false, handleHuxing: false, handleClass: false,
     })
-    console.log(this.data.postData)
+    this.setData({ cases: [] });
+    this.data.postData.page = 1;
+    this.setData({ loadMore: true });
+    this.loadMore(this.data.postData)
   }
 })

@@ -10,7 +10,7 @@
     <view class="category-list {{!handleStyle ? 'category-list-hide':'category-list-show'}}">
       <view class="category-list-item">
         <block wx:for='{{styleList}}' wx:key='index'>
-          <text class="category {{item.id==postData.styleId ? 'action' : ''}}" catchtap='handleStyle' data-index='{{index}}'>{{item.value}}</text>
+          <text class="category {{item.id==postData.styleId ? 'action' : ''}}" catchtap='handleStyle' data-index='{{index}}'>{{item.name}}</text>
         </block>
       </view>
       <view class="category-cover" bindtap="handleItem" data-item='1'></view>
@@ -19,7 +19,7 @@
     <view class="category-list {{!handleHuxing ? 'category-list-hide':'category-list-show'}}">
       <view class="category-list-item">
         <block wx:for='{{huxingList}}' wx:key='index'>
-          <text class="category {{item.id==postData.huxingId ? 'action' : ''}}" catchtap='handleHuxing' data-index='{{index}}'>{{item.value}}</text>
+          <text class="category {{item.id==postData.huxingId ? 'action' : ''}}" catchtap='handleHuxing' data-index='{{index}}'>{{item.name}}</text>
         </block>
       </view>
       <view class="category-cover" bindtap="handleItem" data-item='2'></view>
@@ -28,7 +28,7 @@
     <view class="category-list {{!handleClass ? 'category-list-hide':'category-list-show'}}">
       <view class="category-list-item">
         <block wx:for='{{classList}}' wx:key='index'>
-          <text class="category {{item.id==postData.classId ? 'action' : ''}}" catchtap='handleClass' data-index='{{index}}'>{{item.value}}</text>
+          <text class="category {{item.id==postData.classId ? 'action' : ''}}" catchtap='handleClass' data-index='{{index}}'>{{item.name}}</text>
         </block>
       </view>
       <view class="category-cover" bindtap="handleItem" data-item='3'></view>
@@ -37,14 +37,14 @@
 <view class='list-masonry'>
 
   <view class='list-masonry-column'>
-  <navigator url='/pages/caseShow/caseShow'>
-    <view class='item-masonry' wx:for="{{note}}" wx:key="index" wx:if='{{index%2==0}}'>
-      <image src='{{item.url}}' mode='widthFix'></image>
-      <text>{{item.title}}{{index}}</text>
+  <navigator url='/pages/caseShow/caseShow?id={{item.id}}' wx:for="{{cases}}" wx:key="index" wx:if='{{index%2==0}}'>
+    <view class='item-masonry'>
+      <image src='{{item.more.thumbnail}}' mode='widthFix'></image>
+      <text>{{item.title}}</text>
       <view class='case-info'>
         <view class='view-count'>
           <view class='eye-icon'></view>
-          <text class='view-count-text'>20056</text>
+          <text class='view-count-text'>{{item.clicks}}</text>
         </view>
         <view class='star-count'>
           <view class='star-icon'></view>
@@ -56,13 +56,14 @@
   </view>
   
   <view class='list-masonry-column'>
-    <view class='item-masonry' wx:for="{{note}}" wx:key="index" wx:if='{{index%2==1}}'>
-      <image src='{{item.url}}' mode='widthFix'></image>
-      <text>{{item.title}}{{index}}</text>
+  <navigator url='/pages/caseShow/caseShow?id={{item.id}}' wx:for="{{cases}}" wx:key="index" wx:if='{{index%2==1}}'>
+    <view class='item-masonry'>
+      <image src='{{item.more.thumbnail}}' mode='widthFix'></image>
+      <text>{{item.title}}</text>
       <view class='case-info'>
         <view class='view-count'>
           <view class='eye-icon'></view>
-          <text class='view-count-text'>20056</text>
+          <text class='view-count-text'>{{item.clicks}}</text>
         </view>
         <view class='star-count'>
           <view class='star-icon'></view>
@@ -70,10 +71,11 @@
         </view>
       </view>
     </view>
+  </navigator>
   </view>
   
 
 </view>
-
+<view class='noMore' wx:if="{{!loadMore}}">没有更多了</view>
   
 </view>

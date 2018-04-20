@@ -162,3 +162,8 @@ page{
   border: 1px solid #009966;
   color:#009966;
 }
+.noMore{
+  text-align: center;
+  color:#999;
+  padding:20rpx;
+}

@@ -1,4 +1,6 @@
 //index.js
+var request = require('../../utils/request');
+var api = require('../../utils/api');
 //获取应用实例
 const app = getApp()
 
@@ -16,6 +18,12 @@ Page({
     })
   },
   onLoad: function () {
+
+    request.GET(api.case,{},function(res){
+      
+    });
+
+
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

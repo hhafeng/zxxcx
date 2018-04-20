@@ -12,8 +12,10 @@
     "pages/logs/logs",
     "pages/topic/topic",
     "components/calc/calc",
-    "components/bm/bm"
-    
+    "components/bm/bm",
+    "pages/article/article",
+    "pages/articleShow/articleShow",
+    "pages/topicList/topicList"
   ],
   "window": {
     "backgroundColor": "#222",
