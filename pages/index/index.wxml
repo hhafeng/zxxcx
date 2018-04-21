@@ -23,7 +23,7 @@
   </view>
   <view class='item-divider'></view>
 
-  <view><calc inner-style="{{calcStyle}}"></calc></view>
+  <view><calc inner-style="{{calcStyle}}" bind:doCalc="_doCalc"></calc></view>
 
   <view class='item-divider'></view>
 

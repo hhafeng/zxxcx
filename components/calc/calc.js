@@ -40,17 +40,31 @@ Component({
       ['1阳台', '2阳台', '3阳台', '4阳台', '5阳台'], 
     ],
     multiIndex: [0, 0, 0 ,0],
+    area:'',
+    telphone:'',
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-
+    _doCalc() {
+      var detail = { area: this.data.area, huxing: this.data.multiIndex,telphone:this.data.telphone};
+      this.triggerEvent('doCalc',detail);
+    },
+    bindMultiPickerChange: function (e) {
+      this.setData({
+        multiIndex: e.detail.value
+      })
+    },
+    inputArea(e){
+      this.setData({area:e.detail.value})
+    },
+    inputTelphone(e){
+      this.setData({telphone:e.detail.value})
+    }
   },
   ready:function(){
-
-    console.log(this.properties.innerStyle)
 
     setInterval(()=>{
       var ge=Math.floor(Math.random() * 10);
@@ -71,14 +85,6 @@ Component({
       
     },200)
   },
-  bindMultiPickerChange: function (e) {
-    console.log('picker发送选择改变，携带值为', e.detail.value)
-    this.setData({
-      multiIndex: e.detail.value
-    })
-  },
-
-
 
 
 

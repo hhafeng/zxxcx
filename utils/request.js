@@ -14,7 +14,7 @@ function request(method, url, data, success, fail, showLoading) {
     success: function (res) {
       if (res.data.code != 1) {
         wx.showModal({
-          title: '出错了',
+          title: '提示',
           content: res.data.msg,
         })
         return;

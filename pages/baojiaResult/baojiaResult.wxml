@@ -1,0 +1,25 @@
+<!--pages/baojiaResult/baojiaResult.wxml-->
+<view class='baojiaResult-page'>
+  <view class='baojia-result-box'>
+    <view class='baojia-result'>
+      <view class='result-title'>
+        <view class='result-title-t'>您家的装修估算结果</view>
+        <view class='result-title-c'><text>48000</text>元</view>
+      </view>
+      <view class='result-content'>
+        <view>人工费：28500元</view>
+        <view>材料费：18500元</view>
+        <view>设计费：0元</view>
+        <view>质检费：0元</view>
+      </view>
+    </view>
+  </view>
+  <view class='result-tip'>
+    <view class='result-tip-1'>*稍后客服人员将回电您，免费提供装修咨询服务</view>
+    <view class='result-tip-2'>*因材料品牌及工程量不同，具体报价以量房实测为准</view>
+  </view>
+ 
+  <view class='calc-bottom'>
+    <image src='//img.to8to.com/wap/v2/zxbj/m_from_img3.jpg' mode='widthFix' style='width:100%;'></image>
+  </view>
+</view>

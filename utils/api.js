@@ -8,5 +8,6 @@ module.exports = {
     topic: config.HTTP_HOST + '/api/topic',
     nav: config.HTTP_HOST + '/api/nav',
     profile: config.HTTP_HOST + '/api/profile',
-    tool: config.HTTP_HOST + '/api/tool'
+    tool: config.HTTP_HOST + '/api/tool',
+    baojia: config.HTTP_HOST + '/api/baojia'
 }

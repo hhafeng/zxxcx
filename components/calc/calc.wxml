@@ -16,7 +16,7 @@
   </view>
   <view class='lz-form'>
     <view class='lz-form-item'>
-      <input placeholder-class='lz-form-placeholder' type='text' type='number' placeholder='面积' /><text class='lz-form-item-right'>㎡</text>
+      <input placeholder-class='lz-form-placeholder' type='text' type='number' placeholder='面积' bindinput='inputArea' /><text class='lz-form-item-right'>㎡</text>
     </view>
     <view class='lz-form-item'>
       <picker mode="multiSelector" bindchange="bindMultiPickerChange" value="{{multiIndex}}" range="{{multiArray}}">
@@ -24,10 +24,10 @@
       </picker>
     </view>
     <view class='lz-form-item'>
-      <input placeholder-class='lz-form-placeholder' type='text' type='number' placeholder='输入手机，短信获取报价结果' />
+      <input placeholder-class='lz-form-placeholder' type='text' type='number' placeholder='输入手机，短信获取报价结果' bindinput='inputTelphone' maxlength='11' />
     </view>
     <view class='lz-form-item-button'>
-      <button class='lz-btn lz-btn-default lz-btn-block' style="background-color:{{innerStyle.btn_color}}">{{innerStyle.btn_title}}</button>
+      <button class='lz-btn lz-btn-default lz-btn-block' style="background-color:{{innerStyle.btn_color}}" bindtap='_doCalc'>{{innerStyle.btn_title}}</button>
     </view>
   </view>
 </view>

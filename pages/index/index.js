@@ -92,6 +92,11 @@ Page({
     }
     
   },
+  _doCalc(e){
+    request.POST(api.baojia,e.detail,(res)=>{
+      console.log(res)
+    })
+  },
   getUserInfo: function(e) {
     console.log(e)
     app.globalData.userInfo = e.detail.userInfo

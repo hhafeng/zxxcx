@@ -15,7 +15,9 @@
     "components/bm/bm",
     "pages/article/article",
     "pages/articleShow/articleShow",
-    "pages/topicList/topicList"
+    "pages/topicList/topicList",
+    "pages/baojiaResult/baojiaResult"
+   
   ],
   "window": {
     "backgroundColor": "#222",
