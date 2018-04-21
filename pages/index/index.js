@@ -6,6 +6,14 @@ const app = getApp()
 
 Page({
   data: {
+    postData:{ page: 1, isIndex: true},
+    loadMore:true,
+    topAdv:[],
+    centerAdv: [],
+    appNav:[],
+    calcStyle:{},
+    indexCase:[],
+
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
@@ -17,12 +25,21 @@ Page({
       url: '../logs/logs'
     })
   },
-  onLoad: function () {
-
-    request.GET(api.case,{},function(res){
-      
+  onLoad () {
+    request.GET(api.adv,{'pid':1},(res)=>{
+      this.setData({ topAdv: res.data })
+    })
+    request.GET(api.nav,{},(res)=>{
+      this.setData({appNav:res.data})
     });
-
+    request.GET(api.adv, { 'pid': 2 }, (res) => {
+      this.setData({ centerAdv: res.data })
+    })
+    request.GET(api.tool, {}, (res) => {
+      this.setData({ calcStyle: res.data.calc })
+    })
+    this.loadMore(this.postData);
+    
 
     if (app.globalData.userInfo) {
       this.setData({
@@ -50,6 +67,30 @@ Page({
         }
       })
     }
+  },
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom () {
+    this.data.postData.page++;
+    this.loadMore(this.data.postData);
+  },
+  loadMore(postData){
+    if(this.data.loadMore){
+      request.GET(api.case, postData, (res) => {
+        if(res.data.length>0){
+          res.data.forEach((item, index) => {
+            this.data.indexCase.push(item)
+            this.setData({ indexCase: this.data.indexCase })
+          })
+        }else{
+          this.setData({ loadMore: false })
+        }
+        
+        
+      })
+    }
+    
   },
   getUserInfo: function(e) {
     console.log(e)

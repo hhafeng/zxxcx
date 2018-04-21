@@ -1,81 +1,50 @@
 <!--index.wxml-->
 <view class='index-page'>
   <swiper indicator-dots='true' autoplay='true' style='width:100%;'>
-    <swiper-item>
-      <image src='https://zhuangxiuapp.oss-cn-hangzhou.aliyuncs.com/3f3c46e4370c2e7627223916bb50324843986.png' />
+    <swiper-item wx:for="{{topAdv}}" wx:key="index">
+      <image src='{{item.more.thumbnail}}' />
     </swiper-item>
-    <swiper-item>
-      <image src='https://zhuangxiuapp.oss-cn-hangzhou.aliyuncs.com/3f3c46e4370c2e7627223916bb50324843986.png' />
-    </swiper-item>
-    <swiper-item>
-      <image src='https://zhuangxiuapp.oss-cn-hangzhou.aliyuncs.com/3f3c46e4370c2e7627223916bb50324843986.png' />
-    </swiper-item>
+    
   </swiper>
   
   <view class='nav'>
-    <navigator url='/pages/baoming/baoming' hover-class='none' class='nav-item'>
-      <view class='hot-icon'></view>
-      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_965627BA3651FB83A1B019D49BD71E90.png' />
-      <text>免费设计</text>
-    </navigator>
-    <view class='nav-item'>
-      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_BDB2D47CDEB3B8C02449D90F8AB5B197.png' />
-      <text>装修咨询</text>
-    </view>
-    <navigator url='/pages/designer/designer' hover-class='none' class='nav-item'>
-      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_B9E785A2ABA269F2DDB0CD35B007A173.png' />
-      <text>设计大伽</text>
-    </navigator>
-    <view class='nav-item'>
-      <image src='http://zq.jhcms.cn/attachs/photo/201711/20171120_2AF37A27AFC5F17E07B6BBC0B5B82B87.png' />
-      <text>装修知识</text>
-    </view>
-    <navigator url='/pages/aboutus/aboutus' hover-class='none' class='nav-item'>
-      <image src='http://zq.jhcms.cn/attachs/photo/201712/20171219_AC14C6F8FA63858B9CDF0093938D8F0E.png' />
-      <text>关于我们</text>
+    <navigator wx:for="{{appNav}}" wx:key="index" url='{{item.link_url}}' hover-class='none' class='nav-item'>
+      <view class='hot-icon' wx:if="{{item.is_hot==1}}"></view>
+      <image src='{{item.more.thumbnail300}}' />
+      <text>{{item.title}}</text>
     </navigator>
   </view>
   <view class='index-ad'>
-    <view class='index-ad-1'><image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' /></view>
+    <view class='index-ad-1'><image src='{{centerAdv[0].more.thumbnail}}' /></view>
     <view class='index-right-ad'>
-      <view class='index-ad-2'><image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_D72EBBE90C89A20710D49B78113DB169.jpg' /></view>
-      <view class='index-ad-3'><image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_54088318F419F37DED1C5B7782550A88.jpg' /></view>
+      <view class='index-ad-2'><image src='{{centerAdv[1].more.thumbnail}}' /></view>
+      <view class='index-ad-3'><image src='{{centerAdv[2].more.thumbnail}}' /></view>
     </view>
   </view>
   <view class='item-divider'></view>
 
-  <view><calc></calc></view>
+  <view><calc inner-style="{{calcStyle}}"></calc></view>
 
   <view class='item-divider'></view>
 
   <view class='index-case'>
     <view class='simple-title'>
       <text class='simple-title-text'>精品案例</text>
-      <text class='simple-title-more'>更多>></text>
+      <navigator url='/pages/case/case' open-type='switchTab'><text class='simple-title-more'>更多>></text></navigator>
     </view>
     <view class='index-case-list'>
+    <navigator wx:for="{{indexCase}}" wx:key="index" url='/pages/caseShow/caseShow?id={{item.id}}'>
       <view class='index-case-item'>
-        <image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' />
-        <view class='index-case-text'>
-          <text>欧式三房二厅装修效果图欧式三房二厅装修效果图欧式三房二厅装修效果图</text>
-          <view class='eye-icon'></view>200
-        </view>
+          <image src='{{item.more.thumbnail}}' mode='aspectFill' />
+          <view class='index-case-text'>
+            <text>{{item.title}}</text>
+            <view class='eye-icon'></view>{{item.clicks}}
+          </view>
       </view>
-      <view class='index-case-item'>
-        <image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' />
-        <view class='index-case-text'>
-          <text>欧式三房二厅装修效果图</text>
-          <view class='eye-icon'></view>200
-        </view>
-      </view>
-      <view class='index-case-item'>
-        <image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' />
-        <view class='index-case-text'>
-          <text>欧式三房二厅装修效果图</text>
-          <view class='eye-icon'></view>200
-        </view>
-      </view>
+    </navigator>
+      
     </view>
+  
   </view>
-
+<view class='noMore' wx:if="{{!loadMore}}">已经到底了</view>
 </view>

@@ -2,7 +2,7 @@
 <view class='wrapper'>
   <view class='calc-title'>
     <view class='calc-title-line'></view>
-    <text>10秒估算装修报价</text>
+    <text>{{innerStyle.title}}</text>
     <view class='calc-title-line'></view>
   </view>
   <view class='calc-box'>
@@ -27,7 +27,7 @@
       <input placeholder-class='lz-form-placeholder' type='text' type='number' placeholder='输入手机，短信获取报价结果' />
     </view>
     <view class='lz-form-item-button'>
-      <button class='lz-btn lz-btn-default lz-btn-block'>立即计算</button>
+      <button class='lz-btn lz-btn-default lz-btn-block' style="background-color:{{innerStyle.btn_color}}">{{innerStyle.btn_title}}</button>
     </view>
   </view>
 </view>

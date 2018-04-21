@@ -4,7 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    innerStyle:{
+      type:Object,
+      value:{}
+    }
   },
 
   /**
@@ -46,6 +49,9 @@ Component({
 
   },
   ready:function(){
+
+    console.log(this.properties.innerStyle)
+
     setInterval(()=>{
       var ge=Math.floor(Math.random() * 10);
       var shi = Math.floor(Math.random() * 10);
