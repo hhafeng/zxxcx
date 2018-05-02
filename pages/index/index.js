@@ -6,6 +6,7 @@ const app = getApp()
 
 Page({
   data: {
+    calcValue:{area:'',telphone:''},
     postData:{ page: 1, isIndex: true},
     loadMore:true,
     topAdv:[],
@@ -92,9 +93,19 @@ Page({
     }
     
   },
-  _doCalc(e){
+  _doCalc(e) {
+    console.log(e)
     request.POST(api.baojia,e.detail,(res)=>{
-      console.log(res)
+      
+      if(res.code==1){
+        this.setData({ calcValue:{area:'',telphone:''}})
+        var parmas=Object.keys(res.data).map((key)=>{
+          return encodeURIComponent(key) + "=" + encodeURIComponent(res.data[key]);
+        }).join('&');
+        wx.navigateTo({
+          url: '/pages/baojiaResult/baojiaResult?'+parmas,
+        })
+      }
     })
   },
   getUserInfo: function(e) {

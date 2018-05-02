@@ -1,5 +1,5 @@
 <!--pages/topic/topic.wxml-->
-<view class='baoming-page'>
+<view class='topic-page'>
   <view class='calc-top'>
     <image src='https://home.168hs.com//wap/images/hxsj_n_banner.jpg' mode='widthFix' style='width:100%;'></image>
   </view>

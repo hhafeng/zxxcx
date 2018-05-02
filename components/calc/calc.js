@@ -7,6 +7,15 @@ Component({
     innerStyle:{
       type:Object,
       value:{}
+    },
+    value:{
+      type:Object,
+      value:{},
+      observer:function(newVal,oldVal){
+        this.setData({
+          area:newVal.area,telphone:newVal.telphone
+        })
+      }
     }
   },
 
@@ -65,7 +74,6 @@ Component({
     }
   },
   ready:function(){
-
     setInterval(()=>{
       var ge=Math.floor(Math.random() * 10);
       var shi = Math.floor(Math.random() * 10);

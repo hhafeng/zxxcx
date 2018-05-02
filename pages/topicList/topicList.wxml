@@ -1,2 +1,24 @@
 <!--pages/topicList/topicList.wxml-->
-<text>pages/topicList/topicList.wxml</text>
+<view class='topicList-Page'>
+
+  <view class='topicitem'>
+    <image src='https://home.168hs.com//wap/images/hxsj_n_banner.jpg' mode='widthFix' style='width:100%;'></image>
+    <view class='topic-title'><text>装修火热季 0元设计全屋</text></view>
+    <view class='topic-data'><text>活动时间：2017-4-21至2017-5-1</text></view>
+  </view>
+
+
+  <view class='topicitem'>
+    <image src='https://home.168hs.com//wap/images/hxsj_n_banner.jpg' mode='widthFix' style='width:100%;'></image>
+    <view class='topic-title'><text>装修火热季 0元设计全屋</text></view>
+    <view class='topic-data'><text>活动时间：2017-4-21至2017-5-1</text></view>
+  </view>
+
+
+  <view class='topicitem'>
+    <image src='https://home.168hs.com//wap/images/hxsj_n_banner.jpg' mode='widthFix' style='width:100%;'></image>
+    <view class='topic-title'><text>装修火热季 0元设计全屋</text></view>
+    <view class='topic-data'><text>活动时间：2017-4-21至2017-5-1</text></view>
+  </view>
+  
+</view>

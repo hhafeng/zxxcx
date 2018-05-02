@@ -3,14 +3,14 @@
   <view class='baojia-result-box'>
     <view class='baojia-result'>
       <view class='result-title'>
-        <view class='result-title-t'>您家的装修估算结果</view>
-        <view class='result-title-c'><text>48000</text>元</view>
+        <view class='result-title-t'>您家的装修半包估算结果</view>
+        <view class='result-title-c'><text>{{data.total}}</text>元</view>
       </view>
       <view class='result-content'>
-        <view>人工费：28500元</view>
-        <view>材料费：18500元</view>
-        <view>设计费：0元</view>
-        <view>质检费：0元</view>
+        <view>人工费：{{data.rengongfei}}元</view>
+        <view>材料费：{{data.cailiaofei}}元</view>
+        <view>设计费：{{data.shejifei}}元</view>
+        <view>质检费：{{data.zhijianfei}}元</view>
       </view>
     </view>
   </view>
