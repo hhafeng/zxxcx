@@ -1,18 +1,42 @@
 // pages/topic/topic.js
+var request = require('../../utils/request');
+var api = require('../../utils/api');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    data:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    request.GET(api.topic + '/' + options.id, {}, (res) => {
+      if(res.data.status==0){
+        wx.showModal({
+          title: '提示',
+          content: '活动已经结束，看看其他的吧',
+          showCancel:false,
+          success:function(res){
+            if(res.confirm){
+              wx.navigateBack({
+                delta: 1
+              })
+            }
+          }
+        })
+        
+      }else{
+        this.setData({ data: res.data });
+        wx.setNavigationBarTitle({
+          title: res.data.title,
+        })
+      }
+      
+    },()=>{},true)
   },
 
   /**

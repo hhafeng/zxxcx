@@ -1,0 +1,13 @@
+<!--pages/companyPhotos/companyPhotos.wxml-->
+<view class='companyPhotos-page'>
+  <view class='lz-item-title' style='justify-content:center;'>
+    {{data.user_nickname}}-公司相册
+  </view>
+  <view class='photo-list'>
+
+    <view class='photo-item' wx:for="{{data.more.photos}}" wx:key="index">
+      <image src='{{item.url}}' mode='aspectFill' bindtap='preImg' data-url="{{item.url}}"></image>
+    </view>
+
+  </view>
+</view>

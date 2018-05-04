@@ -1,5 +1,6 @@
 {
   "usingComponents":{
-    "calc":"../../components/calc/calc"
+    "calc":"/components/calc/calc",
+    "Dialog": "/components/Dialog/Dialog"
   }
 }

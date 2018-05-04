@@ -90,5 +90,6 @@ view,text {
   background-color: #f1f1f1;
   display: flex;
   align-items: center;
+  font-size:32rpx;
   justify-content: space-between;
 }

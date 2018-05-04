@@ -16,14 +16,16 @@
     "pages/article/article",
     "pages/articleShow/articleShow",
     "pages/topicList/topicList",
-    "pages/baojiaResult/baojiaResult"
-   
+    "pages/baojiaResult/baojiaResult",
+    "pages/companyPhotos/companyPhotos",
+    "pages/companyIntroduce/companyIntroduce",
+    "pages/my/my"
   ],
   "window": {
     "backgroundColor": "#222",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "装修小程序",
+    "navigationBarTitleText": "装修企业营销系统",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
@@ -43,7 +45,7 @@
         "selectedIconPath": "asset/images/toolbar/case2.png"
       },
       {
-        "pagePath": "pages/case/case",
+        "pagePath": "pages/my/my",
         "text": "我的",
         "iconPath": "asset/images/toolbar/about.png",
         "selectedIconPath": "asset/images/toolbar/about2.png"

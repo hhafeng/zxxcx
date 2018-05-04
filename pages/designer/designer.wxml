@@ -2,7 +2,7 @@
 <view class='designer-page'>
   <view class='designer-list'>
 
-<navigator url='/pages/designerShow/designerShow' wx:for="{{designers}}" wx:key="index">
+<navigator url='/pages/designerShow/designerShow?id={{item.id}}' wx:for="{{designers}}" wx:key="index">
     <view class='designer-item'>
       <view class='designer-photo'>
         <image src='{{item.more.thumbnail300}}' mode='widthFix'></image>

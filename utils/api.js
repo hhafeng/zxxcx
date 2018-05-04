@@ -9,5 +9,6 @@ module.exports = {
     nav: config.HTTP_HOST + '/api/nav',
     profile: config.HTTP_HOST + '/api/profile',
     tool: config.HTTP_HOST + '/api/tool',
-    baojia: config.HTTP_HOST + '/api/baojia'
+    baojia: config.HTTP_HOST + '/api/baojia',
+    login: config.HTTP_HOST + '/api/login'
 }

@@ -1,24 +1,13 @@
 <!--pages/topicList/topicList.wxml-->
 <view class='topicList-Page'>
 
-  <view class='topicitem'>
-    <image src='https://home.168hs.com//wap/images/hxsj_n_banner.jpg' mode='widthFix' style='width:100%;'></image>
-    <view class='topic-title'><text>装修火热季 0元设计全屋</text></view>
-    <view class='topic-data'><text>活动时间：2017-4-21至2017-5-1</text></view>
-  </view>
-
-
-  <view class='topicitem'>
-    <image src='https://home.168hs.com//wap/images/hxsj_n_banner.jpg' mode='widthFix' style='width:100%;'></image>
-    <view class='topic-title'><text>装修火热季 0元设计全屋</text></view>
-    <view class='topic-data'><text>活动时间：2017-4-21至2017-5-1</text></view>
-  </view>
-
-
-  <view class='topicitem'>
-    <image src='https://home.168hs.com//wap/images/hxsj_n_banner.jpg' mode='widthFix' style='width:100%;'></image>
-    <view class='topic-title'><text>装修火热季 0元设计全屋</text></view>
-    <view class='topic-data'><text>活动时间：2017-4-21至2017-5-1</text></view>
-  </view>
-  
+  <navigator url='/pages/topic/topic?id={{item.id}}' wx:for="{{data}}" wx:key="index" class='topicitem'>
+    <view class='topicimg'><image src='https://home.168hs.com//wap/images/hxsj_n_banner.jpg' mode='widthFix'></image></view>
+    <view class='topic-title'><text>{{item.title}}</text></view>
+    <view class='topic-data'>
+      <text wx:if="{{item.status==1}}">活动时间：{{item.start_time}}至{{item.end_time}}</text>
+      <text wx:if="{{item.status==0}}">活动已经结束</text>
+    </view>
+  </navigator>
 </view>
+<view class='noMore' wx:if="{{!loadMore}}">没有更多了</view>

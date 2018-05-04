@@ -1,18 +1,23 @@
 // pages/calc/calc.js
+var request = require('../../utils/request');
+var api = require('../../utils/api');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    calcValue: { area: '', telphone: '' },
+    calcStyle:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    request.GET(api.tool, {}, (res) => {
+      this.setData({ calcStyle: res.data.calc })
+    })
   },
 
   /**
@@ -62,5 +67,18 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  _doCalc(e) {
+    request.POST(api.baojia, e.detail, (res) => {
+      if (res.code == 1) {
+        this.setData({ calcValue: { area: '', telphone: '' } })
+        var parmas = Object.keys(res.data).map((key) => {
+          return encodeURIComponent(key) + "=" + encodeURIComponent(res.data[key]);
+        }).join('&');
+        wx.navigateTo({
+          url: '/pages/baojiaResult/baojiaResult?' + parmas,
+        })
+      }
+    })
+  },
 })

@@ -1,2 +1,14 @@
 <!--pages/article/article.wxml-->
-<text>pages/article/article.wxml</text>
+<view class='article-page'>
+
+  <navigator url='/pages/articleShow/articleShow?id={{item.id}}' class='article-item' wx:for="{{data}}" wx:key="index">
+    <view class='article-img'><image src='{{item.more.thumbnail300}}' mode='widthFix'></image></view>
+    <view class='article-art'>
+      <view class='article-title'><text>{{item.title}}</text></view>
+      <view class='article-desc'>{{item.content.description}}</view>
+      <view class='article-data'><text>{{item.create_time.create_time}}</text></view>
+    </view>
+  </navigator>
+  
+</view>
+<view class='noMore' wx:if="{{!loadMore}}">没有更多了</view>

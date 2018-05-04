@@ -1,10 +1,15 @@
 // pages/topicList/topicList.js
+var request = require('../../utils/request');
+var api = require('../../utils/api');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    postData:{page:1},
+    loadMore:true,
+    data: [],
   
   },
 
@@ -12,7 +17,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.loadMore(this.data.postData);
   },
 
   /**
@@ -54,7 +59,8 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+    this.data.postData.page++;
+    this.loadMore(this.data.postData);
   },
 
   /**
@@ -62,5 +68,25 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  /**
+   * 上拉加载
+   */
+  loadMore(postData) {
+    if (this.data.loadMore) {
+      request.GET(api.topic, postData, (res) => {
+        if (res.data.length > 0) {
+          res.data.forEach((item, index) => {
+            this.data.data.push(item);
+          })
+          this.setData({
+            data: this.data.data,
+          })
+        } else {
+          this.setData({ loadMore: false })
+        }
+
+      });
+    }
+  },
 })

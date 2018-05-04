@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "免费设计",
   "usingComponents": {
     "bm": "../../components/bm/bm"
   }

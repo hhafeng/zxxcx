@@ -1,51 +1,22 @@
-// pages/map/map.js
+// pages/companyIntroduce/companyIntroduce.js
+var request = require('../../utils/request');
+var api = require('../../utils/api');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    windowHeight:0,
-    lat:0,
-    lng:0,
-    markers: []
+    data: {}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.getSystemInfo({
-      success: (res)=> {
-        this.setData({
-          windowHeight: res.screenHeight
-        })
-      },
-    })
-    wx.setNavigationBarTitle({
-      title: options.content,
-    })
-    this.setData({
-      markers: [{
-        iconPath: "/asset/images/icon/fox.png",
-        id: 0,
-        latitude: options.lat,
-        longitude: options.lng,
-        width: 32,
-        height: 40,
-        callout: {
-          content: options.content,
-          color: '#fff',
-          fontSize: 12,
-          borderRadius: 20,
-          bgColor: '#555',
-          padding: 8,
-          display: 'ALWAYS'
-        }
-      }],
-      lat:options.lat,
-      lng:options.lng
-    })
+    request.GET(api.profile, {}, (res) => {
+      this.setData({ data: res.data });
+    }, () => { }, true)
   },
 
   /**

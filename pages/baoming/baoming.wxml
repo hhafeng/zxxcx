@@ -1,13 +1,13 @@
 <!--pages/baoming/baoming.wxml-->
 <view class='baoming-page'>
   <view class='calc-top'>
-    <image src='https://home.168hs.com//wap/images/hxsj_n_banner.jpg' mode='widthFix' style='width:100%;'></image>
+    <image src='{{zeroStyle.top_photo}}' mode='widthFix' style='width:100%;'></image>
   </view>
 
   <bm></bm>
 
   <view class='calc-top'>
-    <image src='//img.to8to.com/wap/v2/house_type/img_04.jpg' mode='widthFix' style='width:100%;'></image>
+    <image src='{{item}}' mode='widthFix' style='width:100%;' wx:for="{{zeroStyle.bottom_photos}}" wx:key="index"></image>
   </view>
 
 </view>

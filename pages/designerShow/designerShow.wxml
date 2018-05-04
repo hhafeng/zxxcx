@@ -2,52 +2,41 @@
 <view class='designerShow-page'>
   <view class='designer-p-n'>
     <view class='designer-photo'>
-        <image src='http://zq.jhcms.cn/attachs/photo/201712/20171201_81C5D961AE29EF3DE5DF75CA5459168C.jpg' mode='widthFix'></image>
+        <image src='{{data.more.thumbnail300}}' mode='widthFix'></image>
     </view>
     <view class='designer-n'>
-      <text class='designer-name'>刘志伟</text>
-      <text>首席设计师</text>
+      <text class='designer-name'>{{data.title}}</text>
+      <text>{{data.sub_title}}</text>
     </view>
     
   </view>
   <view class='designer-item'>
+    <view class='item-title'>设计风格</view>
+    <view class='item-content'>{{data.design_style}}</view>
+  </view>
+  <view class='designer-item'>
     <view class='item-title'>设计理念</view>
-    <view class='item-content'>用最简单的语言诠释理性合理的设计，用最灵动的线条勾勒空间架构，用最温馨的色彩配出你的世界！</view>
+    <view class='item-content'>{{data.design_idea}}</view>
   </view>
   <view class='designer-item'>
     <view class='item-title'>个人介绍</view>
-    <view class='item-content'>毕业院校：东南大学
-工作年限：10年
-擅长风格：地中海、美式乡村、现代简约，现代中式，后现代
-设计收费标准：120元/平方米
-作品：银城东苑，紫玉山庄，紫金东郡，凤凰山庄，宏图上逸园，德基紫金南苑，墨香山庄，中山骏景等。</view>
+    <view class='item-content'>{{data.description}}</view>
   </view>
   
   <view class='simple-title'>
       <text class='simple-title-text'>相关案例</text>
     </view>
   <view class='index-case-list'>
-      <view class='index-case-item'>
-        <image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' />
+      
+      <navigator url='/pages/caseShow/caseShow?id={{item.id}}' class='index-case-item' wx:for="{{data.relationCase}}" wx:key="index">
+        <image src='{{item.more.thumbnail}}' mode='aspectFill' />
         <view class='index-case-text'>
-          <text>欧式三房二厅装修效果图欧式三房二厅装修效果图欧式三房二厅装修效果图</text>
-          <view class='eye-icon'></view>200
+          <text>{{item.title}}</text>
+          <view class='eye-icon'></view>{{item.clicks}}
         </view>
-      </view>
-      <view class='index-case-item'>
-        <image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' />
-        <view class='index-case-text'>
-          <text>欧式三房二厅装修效果图</text>
-          <view class='eye-icon'></view>200
-        </view>
-      </view>
-      <view class='index-case-item'>
-        <image src='http://zq.jhcms.cn/attachs/photo/201711/20171130_19FF3D1CB8637C558E0F2811D42AF313.jpg' />
-        <view class='index-case-text'>
-          <text>欧式三房二厅装修效果图</text>
-          <view class='eye-icon'></view>200
-        </view>
-      </view>
+      </navigator>
+      
+
     </view>
 
 

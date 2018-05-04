@@ -1,4 +1,6 @@
 //app.js
+var request = require('./utils/request');
+var api = require('./utils/api');
 App({
   onLaunch: function () {
 
@@ -6,7 +8,10 @@ App({
     wx.login({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        //console.log(res)
+        console.log(res)
+        request.POST(api.login,{code:res.code},(res)=>{
+          console.log(res)
+        })
       }
     })
     // 获取用户信息

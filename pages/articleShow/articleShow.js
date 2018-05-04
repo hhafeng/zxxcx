@@ -1,18 +1,25 @@
 // pages/articleShow/articleShow.js
+var request = require('../../utils/request');
+var api = require('../../utils/api');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    data:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    request.GET(api.article + '/' + options.id, {}, (res) => {
+      this.setData({ data: res.data });
+      wx.setNavigationBarTitle({
+        title: res.data.title,
+      })
+    }, () => { }, true)
   },
 
   /**

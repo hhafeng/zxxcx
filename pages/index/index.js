@@ -41,7 +41,7 @@ Page({
     })
     this.loadMore(this.postData);
     
-
+    
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -69,6 +69,13 @@ Page({
       })
     }
   },
+  /*
+  * 页面加载完成
+  */
+  onReady(){
+    this.dialog = this.selectComponent("#dialog");
+    this.dialog.showDialog();
+  },
   /**
    * 页面上拉触底事件的处理函数
    */
@@ -94,7 +101,6 @@ Page({
     
   },
   _doCalc(e) {
-    console.log(e)
     request.POST(api.baojia,e.detail,(res)=>{
       
       if(res.code==1){

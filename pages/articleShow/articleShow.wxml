@@ -1,2 +1,13 @@
 <!--pages/articleShow/articleShow.wxml-->
-<text>pages/articleShow/articleShow.wxml</text>
+<view class='articleShow-page'>
+  <view class='article-title'>{{data.title}}</view>
+  <view class='article-info'>
+    <text class='article-data'>{{data.create_time.smp_create_time}}</text>
+    <navigator url='/pages/aboutus/aboutus'><text class='article-author'>{{data.author}}</text></navigator>
+  </view>
+  <view class='article-content'>
+    <rich-text nodes="{{data.content.content}}"></rich-text>
+    
+  </view>
+  <view class='article-view-clicks'><text>阅读 {{data.clicks}}</text></view>
+</view>

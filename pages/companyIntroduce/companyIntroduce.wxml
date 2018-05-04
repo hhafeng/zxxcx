@@ -1,0 +1,9 @@
+<!--pages/companyIntroduce/companyIntroduce.wxml-->
+<view class='companyIntroduce-Page'>
+  <view class='lz-item-title' style='justify-content:center;'>
+    {{data.user_nickname}}-公司简介
+  </view>
+  <view class='content'>
+    <rich-text nodes="{{data.user_description.content}}"></rich-text>
+  </view>
+</view>
