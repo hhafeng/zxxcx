@@ -1,1 +1,28 @@
 /* pages/my/my.wxss */
+page{background-color: #f1f1f1}
+.view-top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:30rpx;
+  border-bottom: solid 2rpx #f1f1f1;
+  background-color: #fff;
+}
+.view-top .logo{
+  border: solid 4rpx #fff;
+  border-radius: 50%;
+  margin-bottom: 16rpx;
+  width:160rpx;height:160rpx;
+}
+.view-top text{
+  font-size:32rpx;
+  color:#fff;
+}
+.view-top .tel{
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+}
+.item-content{
+  font-size:32rpx;
+}

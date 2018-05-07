@@ -73,8 +73,8 @@ Page({
   * 页面加载完成
   */
   onReady(){
-    this.dialog = this.selectComponent("#dialog");
-    this.dialog.showDialog();
+    //this.dialog = this.selectComponent("#dialog");
+    //this.dialog.showDialog();
   },
   /**
    * 页面上拉触底事件的处理函数

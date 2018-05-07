@@ -10,5 +10,6 @@ module.exports = {
     profile: config.HTTP_HOST + '/api/profile',
     tool: config.HTTP_HOST + '/api/tool',
     baojia: config.HTTP_HOST + '/api/baojia',
+    favorite: config.HTTP_HOST + '/api/favorite',
     login: config.HTTP_HOST + '/api/login'
 }

@@ -149,5 +149,18 @@ Page({
     this.data.postData.page = 1;
     this.setData({ loadMore: true });
     this.loadMore(this.data.postData)
+  },
+  favorite(e){
+    console.log(e)
+    this.data.cases[e.currentTarget.dataset.index].clicks.favorites++;
+    console.log(this.data.cases[e.currentTarget.dataset.index].clicks.favorites)
+    request.POST(api.favorite, { id: e.currentTarget.dataset.id}, (res) => {
+      if(res.code==1){
+        wx.showToast({
+          title: res.msg,
+          icon:'success'
+        })
+      }
+    });
   }
 })

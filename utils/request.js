@@ -1,6 +1,7 @@
 var config=require('./config');
 
 function request(method, url, data, success, fail, showLoading) {
+  var token=wx.getStorageSync('token');
   if (showLoading) {
     wx.showLoading({
       title: '加载中...',
@@ -10,7 +11,7 @@ function request(method, url, data, success, fail, showLoading) {
     url: url,
     data: data,
     method: method, // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT  
-    header: { 'ACCESS-APP-ID': config.APP_ID }, // 设置请求的 header  
+    header: { 'ACCESS-APP-ID': config.APP_ID,'TOKEN':token }, // 设置请求的 header  
     success: function (res) {
       if (res.data.code != 1) {
         wx.showModal({

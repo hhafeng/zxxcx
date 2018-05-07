@@ -8,9 +8,9 @@
   <view class='case-show-bottom'>
     <view class='case-title'>{{case.title}}</view>
     <view class='case-f-v'>
-        <view class='case-view-count'>{{case.clicks}} 查看</view>
+        <view class='case-view-count'>{{case.clicks.clicks}} 查看</view>
         <view class='case-fav-count'>
-          <view class='star-white-icon m-p-r'></view>879
+          <view class='star-white-icon m-p-r'></view>{{case.clicks.favorites}}
         </view>
     </view>
     <navigator url='/pages/calc/calc'>
