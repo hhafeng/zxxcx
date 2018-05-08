@@ -4,7 +4,7 @@
     <image src='{{data.more.thumbnail}}' mode='widthFix' style='width:100%;'></image>
   </view>
 
-  <bm></bm>
+  <bm bind:doBm="doBm" data-id="{{data.id}}"></bm>
 
   <view class='calc-top'>
     <image src='{{item.url}}' mode='widthFix' style='width:100%;' wx:for="{{data.more.photos}}" wx:key="index" ></image>

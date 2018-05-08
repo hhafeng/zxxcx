@@ -86,5 +86,21 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  doBm(e) {
+    console.log(e)
+    var postData = e.detail;
+    postData['result_type'] = 0;
+    postData['object_id'] = e.currentTarget.dataset.id;
+    request.POST(api.topic, postData, (res) => {
+      if (res.code == 1) {
+        wx.showModal({
+          title: '提示',
+          content: res.msg,
+          showCancel:false
+        })
+      }
+    })
   }
+
 })

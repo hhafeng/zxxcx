@@ -66,5 +66,18 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  doBm(e){
+    var postData=e.detail;
+    postData['result_type']=2;
+    request.POST(api.topic, postData,(res)=>{
+      if(res.code==1){
+        wx.showModal({
+          title: '提示',
+          content: res.msg,
+          showCancel: false
+        })
+      }
+    })
   }
 })

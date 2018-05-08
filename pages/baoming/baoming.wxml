@@ -4,7 +4,7 @@
     <image src='{{zeroStyle.top_photo}}' mode='widthFix' style='width:100%;'></image>
   </view>
 
-  <bm></bm>
+  <bm title="{{zeroStyle.title}}" btn_color="{{zeroStyle.btn_color}}" btn_title="{{zeroStyle.btn_title}}" bind:doBm="doBm"></bm>
 
   <view class='calc-top'>
     <image src='{{item}}' mode='widthFix' style='width:100%;' wx:for="{{zeroStyle.bottom_photos}}" wx:key="index"></image>

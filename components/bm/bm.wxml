@@ -2,20 +2,20 @@
 <view class='wrapper'>
   <view class='calc-title'>
     <view class='calc-title-line'></view>
-    <text>抢领免费设计名额</text>
+    <text>{{title}}</text>
     <view class='calc-title-line'></view>
   </view>
   
   <view class='lz-form'>
     <view class='lz-form-item'>
-      <input placeholder-class='lz-form-placeholder' type='text' type='text' placeholder='请输入您的姓名' />
+      <input placeholder-class='lz-form-placeholder' type='text' type='text' placeholder='请输入您的姓名' bindinput='inputName' />
     </view>
     
     <view class='lz-form-item'>
-      <input placeholder-class='lz-form-placeholder' type='text' type='number' placeholder='请输入手机号' />
+      <input placeholder-class='lz-form-placeholder' type='text' type='number' maxlength='11' placeholder='请输入手机号' bindinput='inputTelphone' />
     </view>
     <view class='lz-form-item-button'>
-      <button class='lz-btn lz-btn-default lz-btn-block'>立即申请</button>
+      <button class='lz-btn lz-btn-default lz-btn-block' style='background-color:{{btn_color}}' bindtap='_dobm'>{{btn_title}}</button>
     </view>
   </view>
 </view>
