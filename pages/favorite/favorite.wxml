@@ -1,0 +1,44 @@
+<!--pages/favorite/favorite.wxml-->
+<view class='favorite-page'>
+  <view class='list-masonry'>
+
+    <view class='list-masonry-column'>
+      <navigator url='/pages/caseShow/caseShow?id={{item.cases.id}}' wx:for="{{favorite}}" wx:key="index" wx:if='{{index%2==0}}'>
+        <view class='item-masonry'>
+          <image src='{{item.cases.more.thumbnail}}' mode='widthFix'></image>
+          <text>{{item.cases.title}}</text>
+          <view class='case-info'>
+            <view class='view-count'>
+              <view class='eye-icon'></view>
+              <text class='view-count-text'>{{item.cases.clicks}}</text>
+            </view>
+            <view class='star-count' catchtap='favorite' data-id="{{item.cases.id}}" data-index="{{index}}">
+              <view class="{{favorited[item.cases.id]==item.cases.id ?'star-yellow-icon' :'star-icon'}}" ></view>
+              <text class='star-count-text'>{{item.cases.favorites}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+
+    <view class='list-masonry-column'>
+      <navigator url='/pages/caseShow/caseShow?id={{item.cases.id}}' wx:for="{{favorite}}" wx:key="index" wx:if='{{index%2==1}}'>
+        <view class='item-masonry'>
+          <image src='{{item.cases.more.thumbnail}}' mode='widthFix'></image>
+          <text>{{item.cases.title}}</text>
+          <view class='case-info'>
+            <view class='view-count'>
+              <view class='eye-icon'></view>
+              <text class='view-count-text'>{{item.cases.clicks}}</text>
+            </view>
+            <view class='star-count' catchtap='favorite' data-id="{{item.cases.id}}" data-index="{{index}}">
+              <view class="{{favorited[item.cases.id]==item.cases.id ?'star-yellow-icon' :'star-icon'}}" ></view>
+              <text class='star-count-text'>{{item.cases.favorites}}</text>
+            </view>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view class='noMore' wx:if="{{!loadMore}}">没有更多了</view>
+</view>

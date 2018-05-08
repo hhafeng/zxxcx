@@ -44,11 +44,11 @@
       <view class='case-info'>
         <view class='view-count'>
           <view class='eye-icon'></view>
-          <text class='view-count-text'>{{item.clicks.clicks}}</text>
+          <text class='view-count-text'>{{item.clicks}}</text>
         </view>
         <view class='star-count' catchtap='favorite' data-id="{{item.id}}" data-index="{{index}}">
-          <view class='star-icon'></view>
-          <text class='star-count-text'>{{item.clicks.favorites}}</text>
+          <view class="{{favorited[item.id]==item.id ?'star-yellow-icon' :'star-icon'}}" ></view>
+          <text class='star-count-text'>{{item.favorites}}</text>
         </view>
       </view>
     </view>
@@ -63,11 +63,11 @@
       <view class='case-info'>
         <view class='view-count'>
           <view class='eye-icon'></view>
-          <text class='view-count-text'>{{item.clicks.clicks}}</text>
+          <text class='view-count-text'>{{item.clicks}}</text>
         </view>
         <view class='star-count' catchtap='favorite' data-id="{{item.id}}" data-index="{{index}}">
-          <view class='star-icon'></view>
-          <text class='star-count-text'>{{item.clicks.favorites}}</text>
+          <view class="{{favorited[item.id]==item.id ?'star-yellow-icon' :'star-icon'}}" ></view>
+          <text class='star-count-text'>{{item.favorites}}</text>
         </view>
       </view>
     </view>

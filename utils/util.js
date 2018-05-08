@@ -13,7 +13,11 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+const favorite= (id)=>{
+  console.log(id)
+}
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  favorite:favorite
 }

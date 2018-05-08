@@ -19,7 +19,8 @@
     "pages/baojiaResult/baojiaResult",
     "pages/companyPhotos/companyPhotos",
     "pages/companyIntroduce/companyIntroduce",
-    "pages/my/my"
+    "pages/my/my",
+    "pages/favorite/favorite"
   ],
   "window": {
     "backgroundColor": "#222",

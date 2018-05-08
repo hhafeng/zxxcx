@@ -25,13 +25,15 @@ Page({
     loadMore:true,
     styleList:[],
     huxingList:[],
-    classList:[]
+    classList:[],
+    favorited:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad (options) {
+    
     request.GET(api.case_category, {},  (res)=> {
       this.setData({
         styleList: res.data['styleList'],
@@ -42,11 +44,17 @@ Page({
     this.loadMore(this.data.postData);
     
   },
+  /*
+  *页面显示调用 每次显示都会执行
+  */
+  onShow(){
+    var favorited = wx.getStorageSync('favorited');
+    this.setData({ favorited: favorited })
+  },
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    console.log('refresh');
     wx.stopPullDownRefresh();
   },
 
@@ -151,16 +159,44 @@ Page({
     this.loadMore(this.data.postData)
   },
   favorite(e){
-    console.log(e)
-    this.data.cases[e.currentTarget.dataset.index].clicks.favorites++;
-    console.log(this.data.cases[e.currentTarget.dataset.index].clicks.favorites)
-    request.POST(api.favorite, { id: e.currentTarget.dataset.id}, (res) => {
-      if(res.code==1){
-        wx.showToast({
-          title: res.msg,
-          icon:'success'
-        })
-      }
-    });
+    var favorited=wx.getStorageSync('favorited');
+    if (!favorited) {
+      favorited = {};
+    }
+    if (e.currentTarget.dataset.id in favorited){
+      /*取消收藏*/
+      request.POST(api.favorite, { id: e.currentTarget.dataset.id }, (res) => {
+        if (res.code == 1) {
+          delete favorited[e.currentTarget.dataset.id];
+          wx.setStorageSync('favorited', favorited)
+          this.data.cases[e.currentTarget.dataset.index].favorites--;
+          this.setData({ cases: this.data.cases, favorited: favorited })
+          wx.showToast({
+            title: res.msg,
+            icon: 'success'
+          })
+        }
+      });
+
+    }else{
+      /*添加收藏*/
+      
+      request.POST(api.favorite, { id: e.currentTarget.dataset.id }, (res) => {
+        if (res.code == 1) {
+          favorited[e.currentTarget.dataset.id] = e.currentTarget.dataset.id;
+          wx.setStorageSync('favorited', favorited)
+          this.data.cases[e.currentTarget.dataset.index].favorites++;
+          this.setData({ cases: this.data.cases, favorited: favorited })
+          wx.showToast({
+            title: res.msg,
+            icon: 'success'
+          })
+        }
+      });
+
+    }
   }
+
+
+
 })

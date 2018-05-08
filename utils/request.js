@@ -1,5 +1,4 @@
 var config=require('./config');
-
 function request(method, url, data, success, fail, showLoading) {
   var token=wx.getStorageSync('token');
   if (showLoading) {
