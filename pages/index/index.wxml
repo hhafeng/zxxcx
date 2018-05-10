@@ -1,9 +1,11 @@
 <!--index.wxml-->
 <view class='index-page'>
   <swiper indicator-dots='true' autoplay='true' style='width:100%;'>
-    <swiper-item wx:for="{{topAdv}}" wx:key="index">
-      <image src='{{item.more.thumbnail}}' />
+  <navigator wx:for="{{topAdv}}" wx:key="index" url='{{item.link_url}}'>
+    <swiper-item >
+      <image src='{{item.more.thumbnail}}' mode='aspectFill'/>
     </swiper-item>
+  </navigator>
     
   </swiper>
   
@@ -15,10 +17,10 @@
     </navigator>
   </view>
   <view class='index-ad'>
-    <view class='index-ad-1'><image src='{{centerAdv[0].more.thumbnail}}' /></view>
+    <view class='index-ad-1'><navigator url='{{centerAdv[0].link_url}}'><image src='{{centerAdv[0].more.thumbnail}}' /></navigator></view>
     <view class='index-right-ad'>
-      <view class='index-ad-2'><image src='{{centerAdv[1].more.thumbnail}}' /></view>
-      <view class='index-ad-3'><image src='{{centerAdv[2].more.thumbnail}}' /></view>
+      <view class='index-ad-2'><navigator url='{{centerAdv[1].link_url}}'><image src='{{centerAdv[1].more.thumbnail}}' /></navigator></view>
+      <view class='index-ad-3'><navigator url='{{centerAdv[2].link_url}}'><image src='{{centerAdv[2].more.thumbnail}}' /></navigator></view>
     </view>
   </view>
   <view class='item-divider'></view>

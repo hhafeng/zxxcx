@@ -1,4 +1,6 @@
 // pages/baojiaResult/baojiaResult.js
+var request = require('../../utils/request');
+var api = require('../../utils/api');
 Page({
 
   /**
@@ -6,6 +8,7 @@ Page({
    */
   data: {
     data:{},
+    calcStyle: {}
   },
 
   /**
@@ -13,6 +16,9 @@ Page({
    */
   onLoad: function (options) {
     this.setData({ data:options})
+    request.GET(api.tool, {}, (res) => {
+      this.setData({ calcStyle: res.data.calc })
+    })
   },
 
   /**

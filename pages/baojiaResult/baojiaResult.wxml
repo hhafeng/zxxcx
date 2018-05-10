@@ -20,6 +20,6 @@
   </view>
  
   <view class='calc-bottom'>
-    <image src='//img.to8to.com/wap/v2/zxbj/m_from_img3.jpg' mode='widthFix' style='width:100%;'></image>
+    <image src='{{item}}' mode='widthFix' style='width:100%;' wx:for="{{calcStyle.bottom_photos}}" wx:key="index"></image>
   </view>
 </view>

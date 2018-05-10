@@ -98,3 +98,4 @@ view,text {
 }
 .bg-white{background-color: #fff;}
 .margin-top{margin-top:24rpx;}
+image{vertical-align: bottom}

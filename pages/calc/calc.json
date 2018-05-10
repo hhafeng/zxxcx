@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "免费装修报价",
   "usingComponents": {
     "calc": "../../components/calc/calc"
   }

@@ -2,7 +2,7 @@
 <view class='topicList-Page'>
 
   <navigator url='/pages/topic/topic?id={{item.id}}' wx:for="{{data}}" wx:key="index" class='topicitem'>
-    <view class='topicimg'><image src='https://home.168hs.com//wap/images/hxsj_n_banner.jpg' mode='widthFix'></image></view>
+    <view class='topicimg'><image src='{{item.more.thumbnail}}' mode='widthFix'></image></view>
     <view class='topic-title'><text>{{item.title}}</text></view>
     <view class='topic-data'>
       <text wx:if="{{item.status==1}}">活动时间：{{item.start_time}}至{{item.end_time}}</text>

@@ -2,5 +2,6 @@
   "usingComponents":{
     "calc":"/components/calc/calc",
     "Dialog": "/components/Dialog/Dialog"
-  }
+  },
+  "enablePullDownRefresh":true
 }

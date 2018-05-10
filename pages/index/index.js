@@ -15,7 +15,6 @@ Page({
     calcStyle:{},
     indexCase:[],
 
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -82,6 +81,30 @@ Page({
   onReachBottom () {
     this.data.postData.page++;
     this.loadMore(this.data.postData);
+  },
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    request.GET(api.adv, { 'pid': 1 }, (res) => {
+      this.setData({ topAdv: res.data })
+    })
+    request.GET(api.nav, {}, (res) => {
+      this.setData({ appNav: res.data })
+    });
+    request.GET(api.adv, { 'pid': 2 }, (res) => {
+      this.setData({ centerAdv: res.data })
+    })
+    request.GET(api.tool, {}, (res) => {
+      this.setData({ calcStyle: res.data.calc })
+    })
+    this.setData({
+      postData: { page: 1, isIndex: true },
+      loadMore: true,
+      indexCase: [],
+    })
+    this.loadMore(this.postData);
+    wx.stopPullDownRefresh();
   },
   loadMore(postData){
     if(this.data.loadMore){
